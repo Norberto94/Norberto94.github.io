@@ -1,0 +1,23 @@
+footer {
+    text-align: center;
+}
+h5 {
+    font-style: oblique;
+}
+html {
+    background-color: #5A5AA9;
+}
+nav {
+    text-align: center;
+    color: #000000;
+}
+hr {
+    height: 5px;
+    background-color: black;
+}
+h1 {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    padding-color: blue;
+}
