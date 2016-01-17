@@ -5,6 +5,13 @@ h2 {
 	background-color: #660033
 }
 
+.simple {
+	text-align: center;
+	font-family: palatino;
+	padding: 25px;
+	background-color: #5A5AA9
+}
+
 img {
 	height: 300px
 }
@@ -12,3 +19,4 @@ img {
 p {
 	font-style: oblique;
 	}
+
