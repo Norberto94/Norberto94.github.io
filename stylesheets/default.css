@@ -20,7 +20,7 @@ hr {
 h1 {
     text-align: center;
     color: black;
-    padding: 10px;
-    padding-color: blue;
+    padding: 25px;
+    background-color: #660033;
     font-family: palatino;
 }
