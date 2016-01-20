@@ -1,28 +1,84 @@
 <!DOCTYPE html>
 <head>
-  <title>My first blog post!</title>
+  <title>My first blog</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
 </head>
 
 <main>
   <a href="http://Norberto94.github.io/blog/index2.html"><h4 id=back>Back</h4></a>
 
-  <h1 class="simple">My First Blog:</h1>
-  <h2 class="simple">On Git and Github</h2>
+  
+  <h2 class="simple">On arrays and hashes</h2>
 
   <section>
     <p>
-      Version control is useful for when you're working solo or in a group. It allows you to work on a proyect without affecting the "real" version, until you're 100% sure that the progress you've made is worthy of becoming permanent. It also lets you go back to an earlier version of your work in case something goes wrong.
-    </p>
-    <p>
-         One of the most popular version control softwares is "git". In git there's the concept of saving a "commit", which can be thought of as a milestone in a body of work. Much like in microsoft you can undo the previous action, git allows you to checkout previous version of a work before or after a given commit. Unlike microsoft word, the user chooses what is considered a milestone, or saving point, rather that it being individual keys or actions. There are good reasons to use Github, a social network for git users. It is very popular, giving access to a broad body or work and communication with other developers, it has a neat UI (once you get the hang of it), and it can be accessed directly from your terminal and your work will be sotred remotely. Github has the concept of "branching off" from the "master" version of a document and then "merging" the branch with the master. This is useful when working solo to make sure that you don't accidentally erase something and lose it forever and to keep track of your progress; it is also useful when sharing your work because others can go thtough your commits and understand your work better. Branching and merging is even more useful when working in groups because it allows everyone to work on their own version of a shared work and only when ready and with the approval of others will the changes made me merged in the shared version.
+    Hashes and arrays are two variations of the concept of storing information in a list form. They are quite similiar in that sense but they are not interchangeable. An array is simpler than a hash as it stores lists of individual pieces of information. For example,
+
+     my_array = ["hello", "world", "!"] 
+
+     This array contains three string elements, but an array can store any kind of Ruby object. The syntax for an array is just as noted above, the elements to be stored go in between these -->[] with a coma between them and assigned to a valid variable name with an equals sign.
+
+     Lets say we want to retieve the element "!" of our awesome array. We'd do it like this --> my_array[2]
+     You might be wondering why "!" would be element 2 and not 3, that's simply becasue we count from zero, so the first element's index specifier/indetifier would be 0, second 1, third 2 and so on...
+
+     An array can contain any kind of Ruby object, right? An array is a Ruby object, so can an array contain an array? 1 + 2 = 3, tide comes in, tide goes out... yes. Yes it can.
+
+     We would call that a multidimensional array. Don't get overwhelmed just remember to follow the syntax.
+
+     any_valid_name = [[1,2],[3,4],[5,6]]
+
+     Calling any_valid_name[0] would return [1,2]
+     Calling any_valid_name[2][1] would return 6
+     We can add an extra index specifier to get to an element inside an array inside a multidimensional array (arrayception if you want to get formal).
 
     </p>
     <p>
-        At first I struggled a bit with the git workflow, but I am starting to get the hang of it. When working on challenge 1.6 it finnaly seemed to "click", at least to a higher degree of understanding. I look foward to learning more about git and Github as it is clearly an important aspect of a developer's work.
+         A Hash is a little different as it stores each element with a "key". So each element in a hash is a pair of two things, the key and the value, respectively.If we were to turn my_array into a hash it could look like this.
+
+         my_hash = {
+         1 =>"hello",
+         2 => "world",
+         3 => "!"
+       }
+
+       Here 1, 2 and 3 are the keys and they each hold the values "hello", "world", and "!" respectively.
+
+       As you may have noticed the syntax for a hash is a bit different, we use these --> {} insetad and => instead of =. I put each pair in a different line for readability sake, but note that it is not necessary. If I wanted to retrieve the value "hello" I'd do it like this.
+
+       puts my_hash[1]
+
+       Remember that both keys and values can be any Ruby object.
+
     </p>
+    <p>
+        Hashes and array are good for different things. Arrays are best used if you need to store information in a specific order. Let's say you get want to write some code that takes a bunch of grades and returns the highest grade, well, we could use an array for that.
+
+        grades = [34, 23, 88, 99, 82, 63]
+
+        grades.sort! <<<---- this would return ---->>> [99, 88, 82, 63, 34, 23]
+
+        grades[0] <<<---- this would return ---->>> 99
+
+        Hashes are, for example, useful when handling a lot of data that does not need to be in a particular order but you need to be able to retieve it easily. Let's say you are creating a person's profile which implies that you'll be dealing with an object (in this case the person) which has many attributes (name, age, height, etc.) It'd very messy to use arrays compared to a hash in this case. Just take a look.
+
+            Arrays
+
+        person_name = "Norberto"
+        person_age = 21
+        person_height = 177
+        person_nationality = "Venezuelan"
+
+            Hash
+
+       person1 = { "name" => "Norberto", "age" => 21, "height" => 177, "nationality" => "Venezuelan" }
+
+       With a hash we can keep all the attributes related to a single element, while with separate arrays they'd be all over the place.
+
+       <p>
+          This was a brief and basic introduction to arrays and hashes. I hope you learned something new today and see ya later!
+       </p>
 
       <!-- copy and paste as many sections as you want to add paragraphs -->
   </section>
