@@ -1,26 +1,35 @@
 footer {
+    margin-top: 2em;
     text-align: center;
     font-family: impact;
+
 }
+
 h5 {
     font-style: oblique;
 }
+
 html {
     background-color: #5A5AA9;
 }
+
 nav {
     text-align: center;
     color: #000000;
     font-family: impact;
 }
-hr {
-    height: 5px;
-    background-color: black;
-}
+
 h1 {
     text-align: center;
     color: black;
-    padding: 10px;
-    padding-color: blue;
+    
     font-family: palatino;
+}
+
+a:hover {
+    color: orange;
+}
+
+a {
+    text-decoration: none;
 }

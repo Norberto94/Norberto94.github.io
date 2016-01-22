@@ -1,12 +1,30 @@
-h2 {
+h1 {
 	text-align: center;
 	font-family: palatino;
 }
 
+.simple {
+	text-align: center;
+	font-family: palatino;
+	padding: 25px;
+	background-color: #5A5AA9
+}
+
 img {
-	height: 300px
+	height: 300px;
+	padding: 5px;
+	background-color: orange;
 }
 
 p {
 	font-style: oblique;
 	}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+h4 {
+	margin-left: 2em;
+}
