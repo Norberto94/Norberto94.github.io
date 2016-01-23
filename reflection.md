@@ -16,3 +16,7 @@ What did you learn about adding and formatting elements with CSS in this challen
 
 I understood why they say that it is best to have a separate file for formatting. It would be a real mess to have on the html file and having a separate file also allows you to interchange styles quickly.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55f35de1fe6a2e5d9cd01bfcd5027ed3727c8075
