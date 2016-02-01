@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>My first blog post!</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<main>
+  <a href="http://Norberto94.github.io/blog/index2.html"><h4 id=back>Back</h4></a>
+
+  <h2 class="simple">On online security</h2>
+
+  <section>
+    <p>
+    In this blog I will go over the .group_by method in Ruby. So first things first, what does .group_by expect as input, and what will it return? It expects a block and it returns a hash, were the key's corresponding value is an array with the members of that group. It will group the object by, hence the name, the result of the given block. You can think of this method as .sort plus the capacity for you to define the criteria by which the input will be sorted by. 
+    </p>
+    <p>
+      Let's take a look at the following example:
+        (0..15).group_by {|number| number % 3}
+      Here, we are giving the method the number 0 to 15 as input and we will group them by the criteria module 3. So we know that .group_by return a hash of with each key being a computed output and the value an array of elements from our input that compute to the key, make sense? So let's figure out what our output will be. The three possibilities for % 3 are 0, 1, and 2. So Those will be our keys, and a number that results in one of those will be part fot tha array of the corresponding key.
+      {0=>[0, 3, 6, 9, 12, 15], 1=>[1, 4, 7, 10, 13], 2=>[2, 5, 8, 11, 14]}
+      0, 3, 6, 9, 12, and 15 % 3 all equal 0, 1, 4, 7, 10, and 13 % 3 all equal 1, and 2, 5, 8, 11, and 14 % 3 all equal 2. Awesome! Sorting stuff with our own criteria, not merely by alphabetical order or ascending/descending order.
+    </p>
+    <p>
+       Let's take a look at another example. For some reason you want to use Ruby to group your family's names by name lenght. 
+
+       family = ["Nancy", "Erick", "Ericka", "MariaFernanda", "Camila", "Norberto", "Jorean"]
+
+       family.group_by{|member| family.length}
+      {5=>["Nancy", "Erick"], 6=>["Ericka", "Camila", "Jorean"], 13=>["MariaFernanda"], 8=>"Norberto"}
+
+      This time our input was an array of strings and our criteria the number of characters. Notice how the key 13 in this case came before 8, that's because hashes will not come out neccesarily ordered.
+    </p>
+    <p>
+      I hope you found this brief introduction to group_by useful and hopefully you can star using it in your Ruby-ing!
+    </p>
+  </section>
+</main>
