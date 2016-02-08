@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+  <title>My first blog post!</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+</head>
+
+<main>
+  <a href="http://Norberto94.github.io/blog/index2.html"><h4 id=back>Back</h4></a>
+
+  <h2 class="simple">On Ruby Classes</h2>
+
+  <section>
+    
+    <img id="code" src="class_album.jpg"/>
+  
+    <p>
+    In the example above I define a new class called "Album" and it takes three variables, the title, the artist, and how many records it has sold. The first method of our new class, initialize, will store the input in three different instance variables, respectively. What's neat about instance variables is that we can make them avilable to other methods inside the same class where they were originally initialized.   
+    </p>
+
+    <p>
+    As you can see we have a second method, "About", and it uses the three variables defined in our initizlize method. The @ notes that a variable is an instance variable, and we can call them at the beginning of a new method to make them available, just as I did.
+    </p>
+
+    <p>
+      The About method will use the sales variables to determine the value of a new variable called success_level and then print a sentence that states the name of the album, the name of the artist, saying that it is an awesome album and a different message at the end depending on how many records it sold. For example, if it sold less than 100 the message will be " but it was not very popular".
+    </p>
+
+    <p>
+      The method about is an instance method, meaning that it can be called to an object of the class in which it was created. In my example I create a "album1" which is equal to a new instance of Album (using .new on Album) and give it the input ("Blonde on Blonde", "Bob Dylan", 2000000).
+    </p>
+
+    <p>
+      I then call the method about on my new object of class Album, album1. The output is:
+    </p>
+
+    <p>
+      "Blonde on Blonde is an awesome album by Bob Dylan and it was a massive hit!"
+    </p>
+
+    <p>
+      This was a basic example of a class, you can create your own and add more than two methods, in fact, you can have as many as you want. Classes are great for storing relating methods and allow you to handle specific kinds of objects effectively.
+    </p>
+
+    <p>
+      I hope this was of help to you and see you the next time!
+    </p>
+
+  </section>
+</main>
