@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby cheatsheet</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/cheat_sheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+</head>
+<body>
+
+  <h2>
+    Ruby basics
+  </h2>
+  <a href="http://Norberto94.github.io/blog/projects.html"><h4 id=back>Back</h4></a>
+
+<table style="width:100%">
+  <tr>
+    <td>1. Function Calls</td>
+    <hr>
+    <td>1. Parentheses can sometimes be omitted. If you're not sure whether they're required, put them in. To be safe, put them in whenever the call is at all complicated. Even one as simple as this.</td>		
+    <td>1. puts "hello"
+puts("hello")</td>
+  </tr>
+  <tr>
+    <td>2. Variables</td>
+    <td>2. Ordinary (local) variables are created through assignment:
+
+</td>
+    <td>2. number = 5</td>		
+  </tr>
+  <tr>
+    <td>3. Strings</td>
+    <td>3. Strings are sequences of text in quotation marks. You can use single or double quotes.
+
+</td>
+    <td>3. name = 'simon'<br>
+name = "simon"</td>		
+  </tr>
+  <tr>
+    <td>4. Methods</td>
+    <td>4. A method call looks like this:</td>
+    <td>4. "simon".upcase # returns "SIMON"</td>   
+  </tr>
+  <tr>
+    <td>5. Conditionals (if)</td>
+    <td>5. Put the if, elsif, else, and end on separate lines as shown. You don't have to indent, but you should.</td>
+    <td>5. if number == 5<br>
+  puts "Success"<br>
+elsif number == 6<br>
+  puts "Acceptable"<br>
+else<br>
+  puts "FAILURE"<br>
+end</td>   
+  </tr>
+  <tr>
+    <td>6. Function Definitions</td>
+    <td>6. Functions can return values, and those values can be assigned to variables. The return value is the last statement in the definition. Here's a simple example:</td>
+    <td>6. def assert_equal(expected, actual)<br>
+  if expected != actual<br>
+    puts "FAILURE!"<br>
+  end<br>
+end</td>   
+  </tr>
+  <tr>
+    <td>7. Here's a little more complicated example:</td>
+    <td>7. def make_positive(number)<br>
+  if number < 0 <br>
+    -number<br>
+  else<br>
+    number<br>
+  end<br>
+end<br>
+</td>
+    <td>7. variable = make_positive(-5) # variable's value is 5<br>
+variable = make_positive(five) # variable's value is 5</td>   
+  </tr>
+  <tr>
+    <td>
+    8. Arrays
+    </td>
+    <td>
+    8. This is an array with nothing in it: 
+    </td>
+    <td>
+    8. [] 
+    </td>
+  </tr>
+  <tr>
+    <td>
+    9. More arrays
+    </td>
+    <td>
+    9. This is an array with two numbers and a string in it. You can put anything into an array.
+    </td>
+    <td>
+    9. [1, 'hello!', 220]
+    </td>
+  </tr>  
+  <tr>
+    <td>
+    10. More arrays
+    </td>
+    <td>
+    10. Here's how you get something out of an array:
+    </td>
+    <td>
+    10. array = [1, 'hello', 220]<br>
+    array[0] # value is 1
+    </td>
+  </tr>
+   <tr>
+    <td>
+    11. More arrays
+    </td>
+    <td>
+    11. How long is an array?
+    </td>
+    <td>
+    11. array.length
+    </td>
+  </tr> 
+  <tr>
+    <td>
+    13. More arrays
+    </td>
+    <td>
+    13. Here's how you change an element:
+    </td>
+    <td>
+    13. array[0]= 'boo!' # value printed is 'boo!'<br>
+# array is now ['boo', 'hello', 220]
+    </td>
+  </tr>
+  <tr>
+    <td>
+    14. More arrays
+    </td>
+    <td>
+    14. Here's how you tack something onto the end of an array:
+    </td>
+    <td>
+    14. array.push('fred') # array is now ['boo', 'hello', 220, 'fred']
+    </td>
+  </tr>
+  <tr>
+    <td>
+    15. More arrays
+    </td>
+    <td>
+    15. Here's how you add an element at a specific index:
+    </td>
+    <td>
+    15. array.insert(1, "bye")<br>
+# array is now ['boo', "bye" , 'hello', 220, 'fred']<br>
+    .insert takes two arguments, first the index where you want to insert to and second the thing to be inserted
+    </td>
+  </tr>
+  <tr>
+    <td>
+    16. Iteration
+    </td>
+    <td>
+    16. When you do something multiple times, it is called iteration. There are many ways to do this. The following will print hello five times:
+    </td>
+    <td>
+    16. 5.times do<br>
+  puts 'hello'<br>
+end
+    </td>
+  </tr>
+  <tr>
+    <td>
+    17. More iteration
+    </td>
+    <td>
+    17. Here's one way to print the numbers from one to 10:
+    </td>
+    <td>
+    17. for x in 1..10 do<br>
+  puts x<br>
+end
+    </td>
+  </tr>
+  <tr>
+    <td>
+    18. More iteration
+    </td>
+    <td>
+    18. And here's another:
+    </td>
+    <td>
+   (1..10).each do |x|<br>
+  puts x<br>
+end
+  </td>
+  </tr>
+  <tr>
+    <td>
+    19. More iteration
+    </td>
+    <td>
+    19. The part between the do and the end is called a block. You can replace the do and end with braces:
+    <td>
+    19. (1..10).each { |x| puts x }
+end
+  </td>
+  </tr>
+  <tr>
+    <td>
+    20. More iteration
+    </td>
+    <td>
+    20. This prints each value of an array:
+    <td>
+    20. ["a", "b", "c"].each { |x| puts x }
+end
+  </td>
+  </tr>
+  <tr>
+    <td>
+    21. More iteration
+    </td>
+    <td>
+    21. What if you want to transform each element of an array? The following capitalizes each element of an array.
+    <td>
+    21. ["hi", "there"].collect { |word| word.capitalize } <br># The result is ["Hi", "There"].
+end
+  </td>
+  </tr>
+
+
+</table>
+
+</body>
+</html>
